@@ -2,9 +2,9 @@
   "name": "counter-app",
   "version": "1.0.0",
   "description": "A simple counter app",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Your Name",
   "license": "ISC",
