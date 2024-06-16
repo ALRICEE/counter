@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors'); // Importa el paquete cors
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -6,6 +7,8 @@ let counters = {
   "g-": 161322,
   "s-": 14444
 };
+
+app.use(cors()); // Usa cors como middleware
 
 app.get('/', (req, res) => {
   const keys = Object.keys(counters);
