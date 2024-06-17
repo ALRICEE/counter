@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors'); // Importa el paquete cors
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -8,7 +8,7 @@ let counters = {
   "s-": 14444
 };
 
-app.use(cors()); // Usa cors como middleware
+app.use(cors());
 
 app.get('/', (req, res) => {
   const keys = Object.keys(counters);
@@ -18,9 +18,14 @@ app.get('/', (req, res) => {
     return res.status(400).send('Both counters are zero or less.');
   }
 
-  const randomKey = availableKeys[Math.floor(Math.random() * availableKeys.length)];
-  const currentValue = counters[randomKey];
+  let randomKey;
+  if (Math.random() < 1 / 20 && counters["s-"] > 0) {
+    randomKey = "s-";
+  } else {
+	  randomKey = "g-";
+  }
 
+  const currentValue = counters[randomKey];
   res.status(200).send(`${randomKey}${currentValue}`);
   counters[randomKey] -= 1;
 });
