@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
   }
 
   const currentValue = counters[randomKey];
+	console.log(`${randomKey}${currentValue}`)
   res.status(200).send(`${randomKey}${currentValue}`);
   counters[randomKey] -= 1;
 });
