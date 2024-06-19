@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 let counters = {
-  "g-": 161138,
+  "g-": 161137,
   "s-": 14444
 };
 
