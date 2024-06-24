@@ -46,7 +46,7 @@ function processQueue() {
     counters = { ...startCounters }; // Reset counters to start from the first unreceived counter
 }
 
-setInterval(processQueue, 6000); // Process queue every 1 minute
+setInterval(processQueue, 120000); // Process queue every 1 minute
 
 app.get('/', (req, res) => {
     let response;
