@@ -7,7 +7,7 @@ app.use(express.text());
 app.use(cors());
 
 let counters = {
-    "g-": 149063,
+    "g-": 147112,
     "s-": 14444
 };
 
@@ -25,7 +25,7 @@ function updateStartCounter(type) {
     receivedCounters[type].sort((a, b) => b - a);
 
     // Step 2: Perform a while loop
-    while (receivedCounters[type].length > 0) {
+while (receivedCounters[type].length > 0) {
     // Step 3: Check if startCounters[type] is in receivedCounters[type]
     const index = receivedCounters[type].indexOf(startCounters[type]);
     if (index !== -1) {
@@ -37,7 +37,11 @@ function updateStartCounter(type) {
         // Exit the loop if the condition is not met
         break;
     }
+
+    // Remove all elements greater than startCounters[type]
+    receivedCounters[type] = receivedCounters[type].filter(counter => counter <= startCounters[type]);
 }
+
 }
 
 function processQueue() {
