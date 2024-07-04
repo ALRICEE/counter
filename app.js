@@ -7,7 +7,7 @@ app.use(express.text());
 app.use(cors());
 
 let counters = {
-    "g-": 127187,
+    "g-": 123942,
     "s-": 14444
 };
 
