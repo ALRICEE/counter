@@ -7,7 +7,7 @@ app.use(express.text());
 app.use(cors());
 
 let counters = {
-    "g-": 112428,
+    "g-": 110924,
     "s-": 14444
 };
 
@@ -51,7 +51,7 @@ function processQueue() {
     counters = { ...startCounters }; // Reset counters to start from the first unreceived counter
 }
 
-setInterval(processQueue, 135000); // Process queue every 1 minute
+setInterval(processQueue, 35000); // Process queue every 1 minute
 
 app.get('/', (req, res) => {
     let response;
