@@ -7,8 +7,8 @@ app.use(express.text());
 app.use(cors());
 
 let counters = {
-    "picture": 103289,
-    "story": 6364
+    "g-": 105573,
+    "s-": 14444
 };
 
 let receivedCounters = {
