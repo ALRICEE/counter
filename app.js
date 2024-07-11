@@ -3,22 +3,14 @@ const app = express();
 const cors = require('cors');
 const port = process.env.PORT || 3000;
 const path = require('path');
+const setupJsFileRoutes = require('./setupJsFileRoutes');
 
 app.use(express.text());
 app.use(cors());
 
-// Define the path to the .js file in the root directory
-const jsFilePath = path.join(__dirname, '1.js');
-
-// Define the route for serving the .js file from the disk
-app.get('/1.js', (req, res) => {
-    // Serve the file from the disk
-    res.sendFile(jsFilePath, (err) => {
-        if (err) {
-            console.error('Error serving the file:', err);
-            res.status(500).send('Server Error');
-        }
-    });
+// Set up routes for JS files
+setupJsFileRoutes(app).then(count => {
+  console.log(`Set up ${count} routes for JS files`);
 });
 
 
