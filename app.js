@@ -15,7 +15,7 @@ setupJsFileRoutes(app).then(count => {
 
 
 let counters = {
-    "g-": 148084,
+    "g-": 146686,
     "s-": 14460
 };
 
