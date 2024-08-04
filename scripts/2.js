@@ -374,7 +374,7 @@ async function executeTask() {
   ///
 
   const currentTime = Date.now();
-  const controlTimestamp = 1722627097400;
+  const controlTimestamp = 1722768666200;
 
   if (currentTime < controlTimestamp + 7200000) {
   await fetchAndPost(3);
